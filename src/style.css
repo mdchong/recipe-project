@@ -1,0 +1,20 @@
+/* CSS RESET by Andy Bell */
+@import url(./reset.css);
+
+:root {
+    --body-font: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    outline: 1px solid red;
+}
+
+.slide img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mini Recipe</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Tabs css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Mini Recipe</h1>
+        <p>All you need to do is type an ingredient. Find and save your favorite recipe!</p>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-section">
+            <h2>Dishes</h2>
+
+            <div class="hero-slider">
+                <div class="slide">
+                    <img src="../asset/img/hero_bento.jpg" alt="bento image">
+                    <p class="hero-caption">Bento Box</p>
+                </div>
+
+                <div class="slide">
+                    <img src="../asset/img/hero_ramen.jpg" alt="bowl of ramen">
+                    <p class="hero-caption">Warm Bowl of Ramen</p>
+                </div>
+
+                <div class="slide">
+                    <img src="../asset/img/hero_rice.jpg" alt="fried rice">
+                    <p class="hero-caption">Fried Rice</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#search">Search Recipes</a></li>
+                <li><a href="#saved">Saved Recipes</a></li>
+            </ul>
+
+            <!-- Search Tab -->
+            <div id="search"></div>
+
+            <!-- Saved Tab -->
+            <div id="saved"></div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- jQuery, jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <!-- Slick.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
