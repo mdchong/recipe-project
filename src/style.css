@@ -2,19 +2,166 @@
 @import url(./reset.css);
 
 :root {
+    /* Font */
     --body-font: 'Nunito', sans-serif;
+
+    /* Colors */
+    --munsell-yellow: #F0C400;
+    --tangerine: #F88702;
+    --bright-orange: #D22701;
+    --white: #fff;
+}
+
+* {
+    /* outline: 1px solid red; */
+    font-family: var(--body-font);
 }
 
 body {
     margin: 0;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+    background-color: var(--bright-orange);
 }
 
-* {
-    outline: 1px solid red;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: var(--bright-orange);
+    color: var(--white);
+}
+
+header h1 {
+        font-size: 1.5rem;
+        margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-text {
+    padding: 3rem 1.5rem;
+}
+
+.hero-text h2 {
+        font-size: 5rem;
+        margin: 0;
+        color: var(--white);
+    }
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.carousel {
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem 1.5rem;
+}
+
+.carousel h2 {
+        text-align: center;
+}
+
+.slide {
+    border-radius: 12px;
+    overflow: auto;
 }
 
 .slide img {
     height: 600px;
     width: 100%;
     object-fit: cover;
+}
+
+.carousel-slider .slide {
+    margin: 0 0.625rem;
+}
+
+.carousel-slider {
+    margin: 1rem -0.625rem; 
+}
+
+.ui-widget-header {
+    background: var(--white);
+    border: 0;
+}
+
+#tabs {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    /* padding: 1.5rem; */
+}
+
+#tabs li {
+    width: 50%;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.tab-panel p {
+    margin: 0;
+}
+
+#search-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#search-form label {
+        font-weight: 700;
+    }
+
+#search-form input {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 0.5px solid gray;
+}
+
+#searchResults, #savedResults {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 0;
+    background: var(--bright-orange);
+    margin: 0;
+}
+
+.card img {
+    margin-top: 0.5rem;
+}
+
+button {
+    padding: 1rem;
+    background: var(--bright-orange);
+    border: 0;
+    color: var(--white);
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
 }

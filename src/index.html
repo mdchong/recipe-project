@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michelle Chong">
+    <meta name="description" content="Mini recipe book with one ingrident">
     <title>My Mini Recipe</title>
 
     <!-- Google Font -->
@@ -11,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 
     <!-- Tabs css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
@@ -23,28 +25,56 @@
 <body>
     <header>
         <h1>My Mini Recipe</h1>
-        <p>All you need to do is type an ingredient. Find and save your favorite recipe!</p>
+
+        <nav>
+            <ul>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#saved">Saved</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="hero-section">
+        <section class="hero-text">
+            <h2>One Ingredient, <br>All The Recipes</h2>
+            <p>Type an ingredient. Find a recipe. Save your favorites.</p>
+        </section>
+
+
+        <!-- Carousel -->
+        <section class="carousel">
             <h2>Dishes</h2>
 
-            <div class="hero-slider">
+            <div class="carousel-slider">
                 <div class="slide">
+                    <!-- https://unsplash.com/photos/a-wooden-box-filled-with-different-types-of-food-lE_WxCJo7cA -->
                     <img src="../asset/img/hero_bento.jpg" alt="bento image">
-                    <p class="hero-caption">Bento Box</p>
                 </div>
 
                 <div class="slide">
+                    <!-- https://unsplash.com/photos/a-bowl-of-ramen-with-meat-eggs-noodles-and-vegetables-NHEL1M1Cv-A -->
                     <img src="../asset/img/hero_ramen.jpg" alt="bowl of ramen">
-                    <p class="hero-caption">Warm Bowl of Ramen</p>
                 </div>
 
                 <div class="slide">
+                    <!-- https://unsplash.com/photos/brown-wooden-bowl-with-food-z32XV0TGSzc -->
                     <img src="../asset/img/hero_rice.jpg" alt="fried rice">
-                    <p class="hero-caption">Fried Rice</p>
+                </div>
+
+                <div class="slide">
+                    <!-- https://unsplash.com/photos/grilled-steak-with-vegetables-on-white-ceramic-plate-Yr4n8O_3UPc -->
+                    <img src="../asset/img/hero_fish.jpg" alt="fish">
+                </div>
+
+                <div class="slide">
+                    <!-- https://unsplash.com/photos/cooked-tacos-lP5MCM6nZ5A -->
+                    <img src="../asset/img/hero_taco.jpg" alt="taco">
+                </div>
+
+                <div class="slide">
+                    <!-- https://unsplash.com/photos/round-white-bowl-with-ramen-and-egg-rAyCBQTH7ws -->
+                    <img src="../asset/img/hero_noodles.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -57,23 +87,48 @@
             </ul>
 
             <!-- Search Tab -->
-            <div id="search"></div>
+            <div id="search" class="tab-panel">
+                <h3>Search by Ingredient</h3>
+                <p>Enter an ingredient you have (ex., chicken, Noodles, Beef), and we'll find you a recipe!</p>
+
+                <form id="search-form">
+                    <label for="ingredientInput">Ingredient:</label>
+                    <input type="text" id="ingredientInput" name="ingredient" placeholder="e.g. chicken" required>
+
+                    <button type="submit" id="searchBtn" class="btn">Find Recipes</button>
+                </form>
+
+                <div id="searchResults" class="card">
+                    <!-- Search results go here -->
+                </div>
+            </div>
 
             <!-- Saved Tab -->
-            <div id="saved"></div>
+            <div id="saved" class="tab-panel">
+                <h3>My Saved Recipes</h3>
+                <p>Recipes you've saved!</p>
+
+                <div id="savedResults" class="card">
+                    <!-- Saved results go here -->
+                </div>
+
+                <button type="button" id="clearSavedBtn" class="btn">Clear All Saved Recipes</button>
+            </div>
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>&copy; My Mini Recipe</p>
+    </footer>
 
     <!-- jQuery, jQuery UI -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" defer></script>
 
     <!-- Slick.js -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
 
     <!-- JS Script -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
